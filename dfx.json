@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "nftmarketplace_backend": {
+      "main": "src/nftmarketplace_backend/main.mo",
+      "type": "motoko"
+    },
+    "nftmarketplace_frontend": {
+      "dependencies": [
+        "nftmarketplace_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nftmarketplace_frontend/src/index.html"
+      },
+      "source": [
+        "src/nftmarketplace_frontend/assets",
+        "dist/nftmarketplace_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
